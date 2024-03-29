@@ -1,0 +1,35 @@
+/* =====Block Info ====== */
+.image-areablog {
+    flex: 4; /* Takes up 40% of the container's width */
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+}
+.boxblog {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(210, 205, 205); /* Transparent white background */
+}
+
+.boxblog:nth-child(odd) {
+    background-color: rgba(255, 252, 252, 0.5); /* Transparent black background */
+}
+
+.boxblog p {
+    margin: 10;
+}
+
+.boxblog img {
+    max-width: 30%;
+    height: auto;
+}
+.container1 {
+    display: flex;
+}
+.text-areablog{
+    flex:2;/* Takes up 20% of the container's width */
+    padding: 5px;
+    background-color: rgb(237, 236, 234); /* Transparent white background */
+}
+
+

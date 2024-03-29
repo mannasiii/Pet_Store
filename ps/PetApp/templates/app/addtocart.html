@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+{%load static %}
+{% block title %} Cart {%endblock%}
+{% block main-content%}
+<!-- =============PRODUCT : SHOP CATEGORY ============== -->
+<div class="container my-5">
+<div class="row">
+    {%if cart %}
+    <h1 class="col-sm-8">
+        <div class="card">
+            <div class="card-body">
+                <h3>Cart</h3>
+                {% for item in cart %}
+                <div class="row">
+                    <div class="col-sm-3 text-center align-self-center">
+                        <img src="{{item.Pet_Product.Product_image.url}}" alt="" srcset="" class="img-fluid img-thumbnil shadow-sm" height="150" width="150">
+                    </div>
+                    <div class="col-sm-9">
+                        <div>
+                            <h5>{{item.Pet_Product.product_title}}</h5>
+                            <p class="mb-2 text-muted small ">{{item.Pet_Product.composition}}</p>
+                            <div class="my-3">
+                                <label for="quantity">Quantity : </label>
+                                <a class="minus-cart btn" pid={{item.Pet_Product.id}}>
+                                    <i class="fas fa-minus-square fa-lg"></i>
+                                    <span id ='quantity'>{{item.Product_quantity}}</span>
+                                    
+                                </a>
+                                <a class="plus-cart btn" pid={{item.Pet_Product.id}}>
+                                    <i class="fas fa-plus-square fa-lg"></i>
+                                </a>
+                                <div class="d-flex justify-content-between"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h1>
+</div>    
+</div>

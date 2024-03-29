@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title%} Product details {% endblock title%}
+
+{% block main-content%}
+<!-- <h4>Product Details {{pk}}</h4>
+<h3>Product details {{petpro}}</h3> -->
+<!-- =============PRODUCT : SHOP CATEGORY ============== -->
+<div class="container">
+    <div class="row flex justify-content-between">
+        <div class="img2 col-lg-5 mt-5">
+            <img src="{{petpro.product_image.url}}"
+                class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" alt="">
+        </div>
+        <div class="productdetail col-lg-5">
+            <h3 style="font-family: Georgia; font-size: 50px;">{{petpro.product_title}}</h3>
+            <h5>Rs.{{petpro.discounted_price}}-</h5>
+            <small class="text-decoration-line-through text-muted fs-5"><del>Rs.{{petpro.selling_price}}-</small></del>
+            <br><br><h4>Product Features</h4>
+            <ul class="fs-5" style="font-family:Georgia;">
+            
+            <li>{{petpro.composition}}</li>
+            <li>{{petpro.prodapp}}</li>
+        </ul>
+        <div class="button row flex" style="font-family: Georgia;">
+            <form action="/add-to-cart" class="d-inline">
+                <input type="hidden" name="prod_id" value="{{ Pet_Product.id }}"/>
+                <button type="submit" class="d-grid gap-2 btn1 btn btn-primary p-1 m-1 btn-1g text-decoration-none text-white"> Add to Cart </button>
+            </form>
+            <div class="btn btn-dark p-1 m-1 btn-1g">
+                <a href="#" class="text-decoration-none text-white">Buy Now !</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{%endblock main-content%}

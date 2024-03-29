@@ -1,0 +1,82 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{%block title%} About {%endblock title%}
+
+{% block banner_slider %}
+<!-- carousel -->
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'app/img/ps/home/cursor/bg.jpg' %}" class="d-block w-100 " alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/img/ps/home/cursor/h.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/img/ps/home/cursor/b.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/img/ps/home/cursor/h4.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- carousel -->
+{%endblock banner_slider %}
+
+{% block main-content %}
+<a href="{% url 'contact' %}" class="btn btn-warning" style="height:70px ; width: 430px; padding: 15px; margin-left:520px;">
+    <button onclick="window.location.href='contact.html'"
+        class="btn btn-outline-danger text-center ">Click here for
+        Contact Us<i class="bi bi-arrow-right"></i>
+    </button>
+</a>
+<div class="container mt-3">
+    <br>
+   
+    <h2 class="text-center">About Us</h2>  
+    
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center"> This is Pet Adoption and we are having pet accessories in shop section.
+            Mumbai City of Maharashtra State in India. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro soluta perspiciatis ad! Sequi perspiciatis, alias totam quo tempore fuga accusamus culpa adipisci magnam reprehenderit aspernatur, sit explicabo. Similique, facere fugiat.
+            ManasiRane....
+        </p>
+    </div>
+
+    <br><br>
+    <h2 class="text-center">Mission</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center"> This is Pet Adoption and we are having pet accessories in shop section.
+            Mumbai City of Maharashtra State in India.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo qui sit accusamus reprehenderit quos atque corrupti beatae vel nulla debitis, itaque quo saepe veritatis dignissimos, et expedita facere ducimus repudiandae.
+            ManasiRane....
+        </p>
+    </div>
+
+ 
+
+    
+
+    <br>
+    <h2 class="text-center">Vision</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center"> This is Pet Adoption and we are having pet accessories in shop section.
+            Mumbai City of Maharashtra State in India. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo impedit magnam optio rem perspiciatis fugit, ipsum quaerat quisquam odit nesciunt culpa velit dicta, recusandae nam, explicabo eius fugiat mollitia veniam.
+            ManasiRane....
+        </p>
+    </div>
+
+    
+</div>
+<br>
+{% endblock main-content %}

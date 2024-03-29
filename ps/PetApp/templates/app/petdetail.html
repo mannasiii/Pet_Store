@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title%}  Pet details {% endblock title%}
+
+{% block main-content%}
+<!-- <h4>Pet Details {{pk}}</h4>
+<h3>Pet Details {{petname}}</h3> -->
+<!-- =============PRODUCT : PET CATEGORY ============== -->
+
+<div class="container">
+    <div class="row flex justify-content-between">
+        <div class="img2 col-lg-5 mt-5">
+            <img src="{{petname.pet_image.url}}"
+                class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75" alt="">
+        </div>
+        <div class="productdetail col-lg-5">
+            <h3 style="font-family: Georgia; font-size: 50px;">{{petname.pet_title}}</h3>
+            <h5>Rs.{{petname.discounted_price}}-</h5>
+            <small class="text-decoration-line-through text-muted fs-5"><del>Rs.{{petname.selling_price}}-</small></del>
+            <br><br><h4>Pet Features</h4>
+            <ul class="fs-5" style="font-family:Georgia;">
+            <li>{{petname.description}}</li>
+            <li>{{petname.composition}}</li>
+            <li>{{petname.prodapp}}</li>
+        </ul>
+        <div class="button row flex" style="font-family: Georgia;">
+            <button type="submit" class="d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-1g text-decoration-none text-white"> Add to Cart </button>
+            <div class="btn btn-dark p-1 m-1 btn-1g">
+                <a href="#" class="text-decoration-none text-white">Buy Now !</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{%endblock main-content%}
